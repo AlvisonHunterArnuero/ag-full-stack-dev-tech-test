@@ -2,6 +2,8 @@
 
 A full-stack basic task management DEMO APP built with **Fastify**, **PostgreSQL**, **React**, **Material UI**, and **TailwindCSS**.
 
+https://github.com/user-attachments/assets/07d31492-7199-4545-8f6a-fb5be8e5ae61
+
 ## Architecture
 
 ```
