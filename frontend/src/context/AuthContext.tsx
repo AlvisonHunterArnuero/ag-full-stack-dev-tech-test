@@ -60,14 +60,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     const logout = () => {
         setUser(null);
         setToken(null);
-        // Clear TanStack Query cache
-        import('@tanstack/react-query').then(({ QueryClient }) => {
-            // This is a bit tricky since we don't have direct access to the client instance here
-            // without passing it or using a more global setup.
-            // But clearing it in Dashboard or App is better.
-        });
-        // Actually, let's just use window.location.reload() for a hard reset as a safe fallback
-        // if we can't easily reach the queryClient here.
+        // We'll perform a reload to reset the app state/cache reliably
         window.location.href = '/login';
     };
 

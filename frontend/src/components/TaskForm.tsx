@@ -24,8 +24,11 @@ export function TaskForm({ open, onClose, onSubmit, task, isLoading }: TaskFormP
 
     useEffect(() => {
         if (open) {
+            // eslint-disable-next-line react-hooks/set-state-in-effect
             setTitle(task?.title ?? '');
+             
             setDescription(task?.description ?? '');
+             
             setErrors({});
         }
     }, [open, task]);

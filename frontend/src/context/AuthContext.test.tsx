@@ -41,9 +41,9 @@ describe('AuthContext', () => {
     });
 
     it('successfully logs in and updates state', async () => {
-        const mockUser = { id: '1', email: 'test@example.com', name: 'Test User', created_at: '', updated_at: '' };
+        const mockUser = { id: 1, email: 'test@example.com', name: 'Test User', role: 'user' as const, created_at: '', updated_at: '' };
         const mockToken = 'fake-token';
-        (authApi.login as any).mockResolvedValue({ user: mockUser, token: mockToken });
+        vi.mocked(authApi.login).mockResolvedValue({ user: mockUser, token: mockToken });
 
         render(
             <AuthProvider>
@@ -64,7 +64,7 @@ describe('AuthContext', () => {
     });
 
     it('loads initial state from localStorage', () => {
-        const mockUser = { id: '1', email: 'stored@example.com', name: 'Stored User' };
+        const mockUser = { id: 1, email: 'stored@example.com', name: 'Stored User', role: 'user' as const, created_at: '', updated_at: '' };
         localStorage.setItem('taskmanager_user', JSON.stringify(mockUser));
         localStorage.setItem('taskmanager_token', 'stored-token');
 

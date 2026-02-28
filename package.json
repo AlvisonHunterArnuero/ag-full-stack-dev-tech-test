@@ -1,0 +1,42 @@
+{
+  "name": "ag-software-test",
+  "version": "1.0.0",
+  "description": "A full-stack basic task management DEMO APP built with **Fastify**, **PostgreSQL**, **React**, **Material UI**, and **TailwindCSS**.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test --prefix frontend",
+    "lint": "npm run lint --prefix frontend && npm run lint --prefix backend",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "frontend/src/**/*.{ts,tsx}": [
+      "eslint --fix --config frontend/eslint.config.js"
+    ],
+    "backend/src/**/*.ts": [
+      "eslint --fix --config backend/eslint.config.mjs"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlvisonHunterArnuero/ag-full-stack-dev-tech-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/AlvisonHunterArnuero/ag-full-stack-dev-tech-test/issues"
+  },
+  "homepage": "https://github.com/AlvisonHunterArnuero/ag-full-stack-dev-tech-test#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.39.3",
+    "eslint": "^9.39.3",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.3.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.3.0",
+    "typescript-eslint": "^8.56.1"
+  }
+}
