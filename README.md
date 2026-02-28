@@ -1,6 +1,6 @@
 # TaskFlow — Task Management Application
 
-A full-stack task management app built with **Fastify**, **PostgreSQL**, **React**, **Material UI**, and **TailwindCSS**.
+A full-stack basic task management DEMO APP built with **Fastify**, **PostgreSQL**, **React**, **Material UI**, and **TailwindCSS**.
 
 ## Architecture
 
@@ -13,16 +13,17 @@ AG SOFTWARE TEST/
 
 ### Tech Stack
 
-| Layer      | Technology                                      |
-|------------|-------------------------------------------------|
-| Backend    | Node.js, Fastify 4, TypeScript                  |
+| Layer      | Technology                                          |
+|------------|-----------------------------------------------------|
+| Backend    | Node.js, Fastify 4, TypeScript                      |
 | Database   | PostgreSQL 16, Knex.js (query builder + migrations) |
-| Auth       | JWT (jsonwebtoken), bcrypt                      |
-| Frontend   | React 18, Vite 7, TypeScript                    |
-| UI         | Material UI v6, TailwindCSS v3                  |
-| State      | TanStack Query v5 (server state), React Context (auth) |
-| Routing    | React Router v6                                 |
-| Docker     | Multi-stage builds, nginx for frontend          |
+| Auth       | JWT (jsonwebtoken), bcrypt                          |
+| Frontend   | React 18, Vite 7, TypeScript                        |
+| UI         | Material UI v6, TailwindCSS v4                      |
+| State      | TanStack Query v5 (server state), R. Context (auth) |
+| Routing    | React Router v6                                     |
+| Testing    | Vitest, React Testing Library, Happy DOM            |
+| Docker     | Multi-stage builds, nginx for frontend              |
 
 ## Features
 
@@ -79,6 +80,13 @@ cd frontend
 npm install
 npm run dev
 # UI running at http://localhost:5173
+```
+
+#### 4. Run Tests
+
+```bash
+cd frontend
+npm test
 ```
 
 ---
@@ -178,7 +186,7 @@ npm run dev
 
 | Method | Endpoint  | Response                                  |
 |--------|-----------|-------------------------------------------|
-| GET    | `/health` | `{ "status": "ok", "timestamp": "..." }` |
+| GET    | `/health` | `{ "status": "ok", "timestamp": "..." }`  |
 
 ---
 
@@ -204,3 +212,11 @@ Migrations run automatically on server startup. Migration files are in `backend/
 6. **Server-side pagination** — Limits database load; implemented at the controller level with `limit`/`offset`.
 7. **Role-based access** — `admin` role embedded in JWT allows backend to enforce access without extra DB queries per request.
 8. **Vite proxy** — Dev server proxies `/api` to backend, avoiding CORS issues in development.
+
+---
+
+Built with love by **Alvison Hunter** — *Senior Web Developer & Visual Designer*
+
+- **Website**: [alvisonhunter.com](https://alvisonhunter.com/)
+- **LinkedIn**: [alvisonhunter](https://www.linkedin.com/in/alvisonhunter/)
+- **GitHub**: [AlvisonHunterArnuero](https://github.com/AlvisonHunterArnuero)
